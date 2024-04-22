@@ -7,9 +7,11 @@ const Exponent = ({ num, exponent }) => (
     <p className="exponent-result">
       {num}
       {Array.apply(null, { length: exponent - 1 }).map(() => ` * ${num}`)}
-      <span>=</span> <span className="total">{num * exponent}</span>
+      <span>=</span> <span className="total">{Math.pow(num, exponent)}</span>
     </p>
   </div>
 );
 
 export default Exponent;
+
+// {num ** exponent} would also work for the calculation
